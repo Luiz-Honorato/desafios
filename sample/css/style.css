@@ -1,0 +1,18 @@
+button {
+    width: 150px;
+    height: 70px;
+    color: black;
+    font:normal 17pt arial;
+    margin: 10px;
+    
+}
+
+
+button:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+input {
+    width: 130px;
+}
