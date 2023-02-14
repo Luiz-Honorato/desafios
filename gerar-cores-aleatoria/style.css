@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+}
+#container {
+    width: 213.7vh;
+    height: 100vh;
+    background-color: rgba(109, 219, 247, 0.836);
+    margin: 0 auto;
+}
+h1 {
+    font-size: 50px;
+}
+#cor {
+    width: 950px;
+    height: 600px;
+    text-align: center;
+    margin: auto;
+    padding-top: 15%;
+   /* justify-content: center;
+    align-items: center;*/
+}
+#cor h1 {
+    animation: colorchange 6s infinite alternate;
+}
+@keyframes colorchange {
+    0% {
+        color: black;
+    }
+    20% {
+        color: rgb(44, 243, 18) 10;
+    }
+    40% {
+        color: #104EF7;
+    }
+    60% {
+        color: #4c0099;
+    }
+    80% {
+        color: #08cff1;
+    }
+    100% {
+        color: white;
+    }
+}
+button {
+    width: 180px;
+    margin-top: 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
