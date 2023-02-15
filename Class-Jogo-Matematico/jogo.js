@@ -112,6 +112,10 @@ class Jogomatematico {
         if(this.score % 20 == 0) {
             this.maximo += 10;
         }
+        if(this.score % 50 == 0 && this.life < 3) {
+            this.life++
+            alert('Você recuperou mais uma vida.')
+        }
     }
     //diminuir pontos e reset game
     gameover() {
