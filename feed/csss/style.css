@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100%;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #101010;
+    box-shadow: 0px 5px 20px #000;
+    color: #fff;
+}
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    border-radius: 100%;
+    height: 55px;
+    border:1px solid blue;
+    margin-left: 2px;
+}
+
+.nav-itens {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    
+}
+svg {
+    margin-left: 20px;
+    font-size: 100px;
+    color: blue;
+}
+#pesquisa {
+    color: #ffff;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 15px;
+    height: 22px;
+    width: 100px;
+    border: 1px solid blue;
+    background-color: #101a1a;
+
+}
+
+ .nav-itens span{
+    margin-left: 35%;
+    margin-top: 5px;
+ }
+
+ #posts {
+    width: 500px;
+    margin: 0 auto;
+    padding: 5px;
+    
+ }
+
+#posts .section img {
+    margin: 10px 15px;
+    width: 37px;
+    border-radius: 100%;
+    border:1px solid blue
+    
+}
+
+#posts img {
+    width: 400px;
+    padding-bottom: 2px;
+    margin-left: 15px;
+ }
+
+#posts .section span {
+    margin-left: 5px;
+}
+
+#posts p {
+    margin-left: 15px;
+    font-size: 13.5px;
+}
+
+
+
+#posts .autorfoto {
+    width: 45px;
+    border: 1px solid blue;
+    border-radius: 100%;
+}
+
+#posts .username {
+    margin-left: 10px;
+}
+.post-img {
+    margin-top: 10px;
+}
+
+.horapostada {
+    font-size: 10px;
+    margin-left: 14px;
+    border-bottom: 0.6px solid gainsboro ;
+}
