@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+button {
+  color: chartreuse;
+  background-color: #101010;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+ul li {
+  list-style: none;
+  padding: 5px;
+  border-bottom: 1px solid rgb(206, 204, 204);
+}
+h2 {
+  display: inline-block;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0 42.5%;
+}
+
+.form input{
+  height: 20px;
+  width: 95%;
+
+}
+
+.form button {
+  color: chartreuse;
+  background-color: #101010;
+  margin: 5px 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
