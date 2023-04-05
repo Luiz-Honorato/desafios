@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 
 
 app.get('/name', (req, res) => {
-    req.connection.query('SELECT * FROM `lista-nomes`.`list-name`', (error, result) => {
+    req.connection.query('SELECT * FROM nomes.list', (error, result) => {
         if(error) {
             res.send(error);
             console.log(error)
@@ -38,15 +38,23 @@ app.get('/name', (req, res) => {
         }
     })
 })
+
 app.post('/name', (req, res) => {
-    req.connection.query('INSERT INTO `lista-nomes`.`list-name` (First_name, Last_name) VALUES ('+ First_name+','+ Last_name +')', (error, result) => {
-        if(error) {
-            res.send(error);
-            console.log(error)
-        } else {
-            res.send(result);
-        }
-    })
+    const {firstName} = req.body;
+    let query = `INSERT INTO nomes.list (firstName)`;
+    if (firstName) {
+        query += ` VALUES ('${firstName}')`;
+        req.connection.query(query, (error, result) => {
+            if(error) {
+                res.status(404).send();
+                console.log(error);
+            } else {
+                res.send("Created");
+            }
+        })
+    } else {
+        res.status(400).res.send('Bad Request')
+    }
 })
 app.listen(8686, () => {
     console.log("servidor rodando")

@@ -4,13 +4,13 @@ import {useEffect, useState} from 'react';
 function App() {
   const [listNames, setListNames] = useState([]);
   const [sortName, setsortName] = useState("");
-  const[First_name, setFirst_name] = useState("");
-  const[Last_name, setLast_name] = useState("")
+  const[firstName, setfirstName] = useState("");
+
   
   //GET
   const carregarNomes = () => {
     fetch('http://localhost:8686/name').then((response) => {
-      console.log("Deu bom")
+      
       response.json().then((data) => {
         setListNames(data);
         console.log(data);
@@ -24,9 +24,8 @@ function App() {
   }, [])
 
   const gerarNome = () => {
-    console.log('Deu bom')
     const index = Math.floor(Math.random() * listNames.length);
-    setsortName(listNames[index].First_name);
+    setsortName(listNames[index].firstName);
   }
 
   //POST
@@ -39,8 +38,7 @@ function App() {
       },
       method: 'POST',
       body: JSON.stringify({
-        First_name: 'Novo haha',
-        Last_name: 'GGFGFG'
+        firstName: firstName
       })
     })
     .then(() => {
@@ -54,19 +52,17 @@ function App() {
       <div>
         <ul>
           {listNames.map(nome => (
-            <li key={nome.id}>{nome.First_name}</li>
+            <li key={nome.id}>{nome.firstName}</li>
           ))}
           
         </ul>
         <span><h2>Sorteado:</h2> {sortName}</span>
       </div>
+      <hr/>
       <div className='form'>
         <label>
-          <input placeholder='first name' type='text' value={First_name} onChange={(e) => setFirst_name(e.target.value)}></input>
-        </label>
-        
-        <label>
-          <input placeholder='last name' type='text' value={Last_name} onChange={(e) => setLast_name(e.target.value)}></input>
+          <h5>Adcionar nome:</h5>
+          <input placeholder='first name' type='text' value={firstName} onChange={(e) => setfirstName(e.target.value)}></input>
         </label>
         <button onClick={criarNome}>Adcionar</button>
       </div>
